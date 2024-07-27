@@ -7,22 +7,17 @@
     <style>
         body {
             font-family: monospace;
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #555;
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0;
 			height: 100vh;
-			color: #ffffff;
-			background-color: #555;
         }
         .container {
-			width: 90%;
-			max-width: 500px;
-        }
-        .icon {
 			width: fit-content;
+			max-width: 500px;
 			margin-left: auto;
 			margin-right: auto;
         }
@@ -30,10 +25,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="icon">
-			<img src="data:image/png;base64,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" alt="Access Denied" />
-		</div>
-        <h1 style="color: #fff; text-align: center;">Access Denied</h1>
+        <h1 style="text-align: center;">Access Denied</h1>
         <p>Access to megamail.me is restricted to certain IP addresses only. Your IP address is not authorized to access this website.</p>
     </div>
 </body>
